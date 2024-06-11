@@ -1,0 +1,494 @@
+/* OVERALL FARVER OG FONT STØRRELSER */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* farver */
+:root {
+  --baggrund: #f5ebe0;
+  --menu_farve: #4a4e69;
+  --morkebrun_baggrund: #d6ccc2;
+  --gray_baggrund: #f5f5f5;
+  --gro_baggrund: #edede9;
+
+  /* font størrelser */
+  --mobile-h1: 30px;
+  --desktop-h1: 90px;
+  --mobile-h2: 20px;
+  --dekstop-h2: 50px;
+  --mobile-p: 10px;
+  --desktop-p: 20px;
+  --cv_text: 20px;
+  --footer_text: 10px;
+  --knap-text: 40px;
+
+  /* margin + padding */
+
+  --margin-mobile: 30px;
+  --margin-desktop: 130px;
+}
+
+/* STYLING AF SITE OVERALL */
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.begyndelse_indhold {
+  display: grid;
+  gap: 30px;
+}
+
+.item img {
+  aspect-ratio: 1 /1;
+  width: 300px;
+
+  object-fit: contain;
+}
+
+/* Font størrelser + text */
+
+body {
+  font-family: "Candal";
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+.knap {
+  background-color: var(--menu_farve);
+  color: var(--baggrund);
+  padding-block: 10px;
+  padding-inline: 60px;
+  max-width: fit-content;
+  font-size: var(--knap-text);
+}
+
+#cv_knap {
+  margin: 0 auto;
+  margin-bottom: 129px;
+  margin-top: 10%;
+  display: block;
+
+  padding: 8px;
+  padding-inline: 50px;
+  font-size: 28px;
+}
+
+#knap_se_site {
+  margin: 0 auto;
+  margin-bottom: 0px;
+  margin-top: 10%;
+  display: block;
+  padding: 10px;
+  padding-inline: 42px;
+  font-size: 20px;
+}
+
+.hunde_grid2 p {
+  grid-column: span 2;
+}
+
+/* VH = view port hight = hvor meget den må fylde skærmen */
+
+.screen_text {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+footer {
+  border-top: solid 4px var(--menu_farve);
+  padding-block: 30px;
+  margin-top: 30px;
+  text-align: center;
+  font-size: var(--footer_text);
+  padding-block: 22px;
+  margin: 33px;
+}
+
+.h1 {
+  font-size: var(--mobile-h1);
+  margin-inline: var(--margin-mobile);
+}
+
+.overskrift_box {
+  padding-block: 22px;
+  margin: 33px;
+  border-bottom: 4px solid var(--menu_farve);
+}
+h2 {
+  font-size: var(--mobile-h2);
+}
+
+.p {
+  font-size: var(--mobile-p);
+  font-weight: 700;
+  text-align: center;
+}
+
+.cv_text {
+  font-size: var(--cv_text);
+}
+
+.tiktok_box,
+.hive,
+.some,
+.fx,
+.himmelev,
+.rye,
+.gym,
+.kea {
+  margin: 39px;
+  font-size: var(--mobile-p);
+}
+
+/* BAGGRUNDS FARVER PÅ SITES */
+
+.forside,
+.screen,
+.animation,
+.portfolie {
+  background-color: var(--baggrund);
+}
+
+.web,
+.indhold,
+.mig {
+  background-color: var(--morkebrun_baggrund);
+}
+
+.ux {
+  background-color: var(--gray_baggrund);
+}
+
+.grid_portfolie {
+  display: grid;
+  gap: 30px;
+}
+
+.erfaring ol {
+  list-style: none;
+  font-size: var(--cv_text);
+}
+
+.erfaring {
+  margin-top: 100px;
+}
+
+.erfaring ul {
+  gap: 30px;
+}
+
+.erfaring h3 {
+  font-size: var(--mobile-h2);
+}
+
+/**** PORTFOLIE BOX =   */
+
+.item {
+  padding: 20px;
+  border: 1px solid var(--menu_farve);
+  text-align: center;
+}
+
+.item h3 {
+  margin-bottom: 20px;
+}
+
+/* Når jeg bruger 1n = tager jeg den første kasse aka. barn*/
+.item:nth-child(1n) {
+  background-color: var(--morkebrun_baggrund);
+}
+
+.item:nth-child(2n) {
+  background-color: var(--gro_baggrund);
+}
+
+/* AFSTANDE OG PLACERINGER */
+
+.container {
+  width: 90%;
+  margin-inline: auto;
+  display: grid;
+
+  row-gap: 70px;
+}
+
+.container_forside {
+  width: 70%;
+  margin-inline: auto;
+}
+
+.billede_mig {
+  grid-column: span 2;
+  height: 400px;
+  object-fit: contain;
+}
+
+.container p,
+h2 {
+  text-align: center;
+}
+
+/**** MENU STYLING ****/
+
+header {
+  background-color: var(--menu_farve);
+  position: sticky;
+  top: 0;
+}
+
+.burger_container {
+  display: flex;
+  justify-content: end;
+  padding: 20px;
+}
+
+.menu {
+  position: sticky;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+  text-align: right;
+}
+
+.menu_open {
+  display: block;
+}
+
+.burger_open .burger_streg:nth-child(2) {
+  opacity: 0;
+}
+
+.burger_open .burger_streg:nth-child(1) {
+  transform: rotate(-45deg);
+  transition: 0.2s;
+}
+
+.burger_open .burger_streg:nth-child(3) {
+  transform: rotate(45deg) translate(-10px, -10px);
+  transition: 0.2s;
+}
+
+header img {
+  width: 30px;
+}
+
+.menu a {
+  color: var(--baggrund);
+}
+
+.menu ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  flex-direction: column;
+}
+
+#burger_knap {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+}
+
+.burger_streg {
+  height: 2px;
+  width: 100%;
+  background-color: var(--baggrund);
+  transition: 0.2s;
+}
+
+.grid_1-2 {
+  grid-column: span 2;
+}
+
+.grid_1-2 p {
+  margin-bottom: 30px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: var(--mobile-p);
+}
+
+.menu_open {
+  display: block;
+}
+
+iframe {
+  aspect-ratio: 16 / 9;
+  margin-top: 40px;
+}
+
+.spil_video {
+  width: 100%;
+}
+
+.grid_indhold {
+  display: grid;
+  gap: 50px;
+  grid-column: span 2;
+}
+
+.hunde_grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.sky,
+.kode_liv {
+  grid-column: 1/3;
+}
+
+/* ALT EFTER DETTE HER, ER COMPUTER-STYLEING*/
+
+@media (min-width: 1000px) {
+  .begyndelse_indhold {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 124px;
+  }
+
+  .grid_portfolie {
+    display: grid;
+    gap: 70px;
+    margin-top: 30px;
+  }
+
+  .forløb_box {
+    display: grid;
+    margin-top: 30px;
+    gap: 30px;
+  }
+
+  .h2_mai {
+    font-size: var(--dekstop-h2);
+  }
+
+  .billede_mig {
+    width: 100%;
+    height: auto;
+    grid-column: span 1;
+  }
+
+  .burger_container {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .menu ul {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .grid_1-2 {
+    grid-column: span 2;
+  }
+
+  .grid_1-2 p {
+    font-size: var(--desktop-p);
+  }
+
+  h2 {
+    font-size: var(--dekstop-h2);
+    margin-bottom: 20px;
+  }
+
+  .erfaring h3 {
+    font-size: var(--dekstop-h2);
+  }
+
+  p {
+    font-size: var(--desktop-p);
+  }
+
+  .mig_text {
+    text-align: left;
+  }
+  .container {
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .grid_portfolie {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px;
+  }
+
+  .item:nth-child(3) {
+    background-color: var(--gro_baggrund);
+  }
+
+  .item:nth-child(2) {
+    background-color: var(--gro_baggrund);
+  }
+
+  .item:nth-child(4) {
+    background-color: var(--morkebrun_baggrund);
+  }
+
+  #knap_se_site {
+    margin: 0 auto;
+    margin-bottom: 129px;
+    margin-top: 10%;
+    display: block;
+
+    padding: 30px;
+    padding-inline: 50px;
+    font-size: 28px;
+  }
+
+  #cv_knap {
+    margin: 0 auto;
+    margin-bottom: 129px;
+    margin-top: 10%;
+    display: block;
+
+    padding: 30px;
+    padding-inline: 50px;
+    font-size: 28px;
+  }
+
+  .hunde_grid1 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+
+  #knap_se_site {
+    background-color: var(--menu_farve);
+    color: var(--baggrund);
+    padding-block: 5px;
+    padding-inline: 24px;
+    max-width: fit-content;
+    font-size: 17px;
+  }
+
+  .tiktok_box,
+  .hive,
+  .some,
+  .fx,
+  .himmelev,
+  .rye,
+  .gym,
+  .kea {
+    margin: 39px;
+    font-size: var(--desktop-p);
+  }
+}
